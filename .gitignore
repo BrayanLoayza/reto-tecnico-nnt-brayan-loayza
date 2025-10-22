@@ -1,0 +1,14 @@
+# Ignorar dependencias de Node (Frontend)
+/reto-tecnico-frontend-angular/node_modules/
+/reto-tecnico-frontend-angular/dist/
+/reto-tecnico-frontend-angular/.angular/
+/reto-tecnico-frontend-angular/tmp/
+
+# Ignorar entorno virtual de Python (Backend)
+/reto-tecnico-backend-django/venv/
+/reto-tecnico-backend-django/__pycache__/
+/reto-tecnico-backend-django/db.sqlite3
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

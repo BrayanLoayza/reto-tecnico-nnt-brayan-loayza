@@ -1,0 +1,31 @@
+<div class="header-container">
+  <h1>{{ title }}</h1>
+  <button class="btn-refresh" (click)="cargarPersonas()" >
+    Actualizar Personas
+  </button>
+</div>
+
+<div *ngIf="persona$ | async as personas; else loading" class="people-container">
+  
+  <div *ngFor="let person of personas" class="person-card">
+    
+    <img [src]="person['Fotografía']" [alt]="person['Nombre']" class="person-photo">
+    
+    <div class="person-info">
+      <h2>{{ person['Nombre'] }}</h2>
+      
+      <p><strong>Email:</strong> {{ person['Correo electrónico'] }}</p>
+      <p><strong>Género:</strong> {{ person['Género'] }}</p>
+      <p><strong>Ubicación:</strong> {{ person['Ubicación'] }}</p>
+      
+      <p><strong>Nacimiento:</strong> {{ person['Fecha de nacimiento'] | date:'dd/MM/yyyy' }}</p>
+    </div>
+  </div>
+
+</div>
+
+<ng-template #loading>
+  <div class="loading-container">
+    <p>Cargando personas...</p>
+    </div>
+</ng-template>
