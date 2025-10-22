@@ -19,6 +19,8 @@ from django.contrib import admin
 from django.urls import path, include
 
 
+#incluimos aqui la url creada para la api
+#propio de django
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/", include("api.urls")),
